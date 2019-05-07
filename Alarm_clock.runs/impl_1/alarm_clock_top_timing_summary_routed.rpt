@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Tue May  7 16:17:10 2019
+| Date         : Tue May  7 20:47:32 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file alarm_clock_top_timing_summary_routed.rpt -pb alarm_clock_top_timing_summary_routed.pb -rpx alarm_clock_top_timing_summary_routed.rpx -warn_on_violation
 | Design       : alarm_clock_top
@@ -64,7 +64,7 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: decre_key/FSM_sequential_current_state_reg[2]/Q (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: decre_key/key_out_r_reg/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: decre_key/key_out_r_reg/Q (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: incre_key/FSM_sequential_current_state_reg[0]/Q (HIGH)
 
@@ -72,7 +72,7 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: incre_key/FSM_sequential_current_state_reg[2]/Q (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: incre_key/key_out_r_reg/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: incre_key/key_out_r_reg/Q (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: left_key/FSM_sequential_current_state_reg[0]/Q (HIGH)
 
@@ -88,7 +88,7 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: right_key/FSM_sequential_current_state_reg[2]/Q (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: right_key/key_out_r_reg/Q (HIGH)
+ There are 17 register/latch pins with no clock driven by root clock pin: right_key/key_out_r_reg/Q (HIGH)
 
  There are 7 register/latch pins with no clock driven by root clock pin: second_counter/loop_reg/Q (HIGH)
 
@@ -105,14 +105,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 447 pins that are not constrained for maximum delay. (HIGH)
+ There are 465 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 8 input ports with no input delay specified. (HIGH)
+ There are 9 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

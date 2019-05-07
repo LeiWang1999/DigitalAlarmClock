@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Tue May  7 16:17:06 2019
+| Date         : Tue May  7 20:47:30 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file alarm_clock_top_methodology_drc_routed.rpt -pb alarm_clock_top_methodology_drc_routed.pb -rpx alarm_clock_top_methodology_drc_routed.rpx
 | Design       : alarm_clock_top
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 213
+             Violations found: 222
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 209        |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 218        |
 | TIMING-20 | Warning  | Non-clocked latch           | 4          |
 +-----------+----------+-----------------------------+------------+
 
@@ -755,325 +755,370 @@ Related violations: <none>
 
 TIMING-17#145 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/audioOut_reg/C is not reached by a timing clock
+The clock pin set_time_module/FSM_onehot_set_id_r_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[0]/C is not reached by a timing clock
+The clock pin set_time_module/FSM_onehot_set_id_r_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[10]/C is not reached by a timing clock
+The clock pin set_time_module/FSM_onehot_set_id_r_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[11]/C is not reached by a timing clock
+The clock pin set_time_module/FSM_onehot_set_id_r_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[12]/C is not reached by a timing clock
+The clock pin set_time_module/FSM_onehot_set_id_r_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[13]/C is not reached by a timing clock
+The clock pin set_time_module/set_num_r_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[14]/C is not reached by a timing clock
+The clock pin set_time_module/set_num_r_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[15]/C is not reached by a timing clock
+The clock pin set_time_module/set_num_r_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[16]/C is not reached by a timing clock
+The clock pin set_time_module/set_num_r_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[17]/C is not reached by a timing clock
+The clock pin song_player_module/audioOut_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[18]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[19]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[1]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[2]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[3]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[4]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[5]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[6]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#163 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[7]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#164 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[8]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#165 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/counter_reg[9]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#166 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[0]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#167 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[1]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#168 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[2]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#169 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[3]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#170 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[4]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#171 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[5]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#172 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[6]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#173 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[7]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#174 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[8]/C is not reached by a timing clock
+The clock pin song_player_module/counter_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#175 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/number_reg[9]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#176 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[0]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#177 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[10]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#178 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[11]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#179 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[12]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#180 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[13]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#181 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[14]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#182 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[15]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#183 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[16]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#184 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[17]/C is not reached by a timing clock
+The clock pin song_player_module/number_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#185 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[18]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#186 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[19]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#187 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[1]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#188 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[20]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#189 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[21]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#190 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[22]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#191 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[23]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#192 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[24]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#193 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[25]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#194 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[26]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#195 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[27]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#196 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[28]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#197 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[29]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#198 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[2]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#199 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[30]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#200 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[31]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#201 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[3]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#202 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[4]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#203 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[5]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#204 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[6]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#205 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[7]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#206 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[8]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#207 Warning
 Non-clocked sequential cell  
-The clock pin song_player_module/time1_reg[9]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#208 Warning
 Non-clocked sequential cell  
-The clock pin two_counter/counter_reg[0]/C is not reached by a timing clock
+The clock pin song_player_module/time1_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#209 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#210 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#211 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#212 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#213 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#214 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#215 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#216 Warning
+Non-clocked sequential cell  
+The clock pin song_player_module/time1_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#217 Warning
+Non-clocked sequential cell  
+The clock pin two_counter/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#218 Warning
 Non-clocked sequential cell  
 The clock pin two_counter/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>

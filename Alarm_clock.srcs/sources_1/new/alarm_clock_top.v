@@ -22,7 +22,7 @@
 
 module alarm_clock_top(
     input clk, 
-    input rst_n, load_SW, fastfwd_SW, alarm_off_SW,
+    input rst_n, load_SW, fastfwd_SW, alarm_off_SW, set_SW,
     input moveRight_BTN, moveLeft_BTN, increment_BTN, decrement_BTN,
     output outsignal_counter, outsignal_time,
     output [7:0] timer_seven_seg, AN,
@@ -46,6 +46,8 @@ module alarm_clock_top(
     wire moveRight_BTN_t, moveLeft_BTN_t, increment_BTN_t, decrement_BTN_t;
 
 
+    wire    [3:0]   set_num;
+    wire    [3:0]   set_id;
     /*******************************************************************
             Main    Code
     *******************************************************************/
@@ -127,6 +129,24 @@ module alarm_clock_top(
         );
 
 
+    
+    /******************************************************
+            设置时间
+    ********************************************************/
+    
+    wire    set_signal = moveRight_BTN_t | increment_BTN_t | decrement_BTN_t;
+
+    set_time set_time_module(
+        .signal(set_signal),
+        .set(set_SW),            //  设置模式使能
+        .incrementBtn(increment_BTN_t), 
+        .decrementBtn(decrement_BTN_t),
+        .enterBtn(moveRight_BTN_t),
+        .set_num(set_num),
+        .set_id(set_id)
+    );
+
+
     /******************************************************
             设置闹钟
     ********************************************************/
@@ -161,13 +181,15 @@ module alarm_clock_top(
  
 
     // seven segment decoder
-    seven_seg_decoder seconds_decoder(out_seconds_ones, out_seconds_tens, timer_seconds_ones, timer_seconds_tens);
+    seven_seg_decoder seconds_decoder(set_id, set_num, timer_seconds_ones, timer_seconds_tens);
     seven_seg_decoder minutes_decoder(out_minutes_ones, out_minutes_tens, timer_minutes_ones, timer_minutes_tens);
     
     // four to one multiplexer
     //  设置位选
-    four_one_mux four_mux(timer_seconds_ones, timer_seconds_tens, timer_minutes_ones, timer_minutes_tens, two_bit_count, timer_seven_seg);
     
+    four_one_mux four_mux(timer_seconds_ones, timer_seconds_tens, timer_minutes_ones, timer_minutes_tens, two_bit_count, timer_seven_seg);
+
+  
     // seven segment display
 
     //  设置段选    100hz切换一次

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Tue May  7 16:17:08 2019
+| Date             : Tue May  7 20:47:31 2019
 | Host             : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command          : report_power -file alarm_clock_top_power_routed.rpt -pb alarm_clock_top_power_summary_routed.pb -rpx alarm_clock_top_power_routed.rpx
 | Design           : alarm_clock_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 36.493 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 38.273 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 35.696                           |
+| Dynamic (W)              | 37.476                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,18 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     4.054 |     1241 |       --- |             --- |
-|   LUT as Logic |     3.504 |      624 |     63400 |            0.98 |
-|   CARRY4       |     0.488 |      166 |     15850 |            1.05 |
-|   Register     |     0.056 |      212 |    126800 |            0.17 |
+| Slice Logic    |     4.074 |     1283 |       --- |             --- |
+|   LUT as Logic |     3.521 |      650 |     63400 |            1.03 |
+|   CARRY4       |     0.491 |      166 |     15850 |            1.05 |
+|   Register     |     0.056 |      221 |    126800 |            0.17 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       32 |       --- |             --- |
-| Signals        |     3.612 |     1063 |       --- |             --- |
+|   Others       |     0.000 |       33 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |        2 |     63400 |           <0.01 |
+| Signals        |     3.744 |     1097 |       --- |             --- |
 | Block RAM      |     0.058 |      0.5 |       135 |            0.37 |
-| DSPs           |     0.028 |        1 |       240 |            0.42 |
-| I/O            |    27.944 |       29 |       210 |           13.81 |
+| DSPs           |     0.030 |        1 |       240 |            0.42 |
+| I/O            |    29.570 |       30 |       210 |           14.29 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    36.493 |          |           |                 |
+| Total          |    38.273 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     8.338 |       7.775 |      0.563 |
-| Vccaux    |       1.800 |     1.116 |       1.023 |      0.093 |
-| Vcco33    |       3.300 |     7.905 |       7.901 |      0.004 |
+| Vccint    |       1.000 |     8.496 |       7.933 |      0.563 |
+| Vccaux    |       1.800 |     1.175 |       1.082 |      0.093 |
+| Vcco33    |       3.300 |     8.365 |       8.361 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,21 +141,22 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| alarm_clock_top       |    35.696 |
-|   clk_module          |     1.713 |
-|   decre_key           |     0.098 |
-|     counter_mod_100HZ |     0.096 |
-|   incre_key           |     0.110 |
-|     counter_mod_100HZ |     0.108 |
-|   left_key            |     0.099 |
-|     counter_mod_100HZ |     0.097 |
-|   minutes_counter     |     0.113 |
-|   right_key           |     0.096 |
-|     counter_mod_100HZ |     0.093 |
-|   second_counter      |     0.334 |
-|   set_time            |     0.494 |
-|   song_player_module  |     4.121 |
-|   two_counter         |     0.450 |
+| alarm_clock_top       |    37.476 |
+|   clk_module          |     1.877 |
+|   decre_key           |     0.097 |
+|     counter_mod_100HZ |     0.095 |
+|   incre_key           |     0.104 |
+|     counter_mod_100HZ |     0.102 |
+|   left_key            |     0.098 |
+|     counter_mod_100HZ |     0.095 |
+|   minutes_counter     |     0.106 |
+|   right_key           |     0.107 |
+|     counter_mod_100HZ |     0.105 |
+|   second_counter      |     0.088 |
+|   set_time            |     0.467 |
+|   set_time_module     |     0.243 |
+|   song_player_module  |     4.239 |
+|   two_counter         |     0.352 |
 +-----------------------+-----------+
 
 
