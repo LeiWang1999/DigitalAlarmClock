@@ -1,0 +1,88 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
+| Date         : Tue May  7 16:16:15 2019
+| Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file alarm_clock_top_control_sets_placed.rpt
+| Design       : alarm_clock_top
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    40 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            4 |
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            2 |
+|     14 |            1 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              26 |           11 |
+| No           | No                    | Yes                    |              24 |            4 |
+| No           | Yes                   | No                     |             316 |           41 |
+| Yes          | No                    | No                     |               8 |            1 |
+| Yes          | No                    | Yes                    |              30 |            7 |
+| Yes          | Yes                   | No                     |              20 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+----------------------------------+------------------------------------------------+------------------+----------------+
+|            Clock Signal            |           Enable Signal          |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
++------------------------------------+----------------------------------+------------------------------------------------+------------------+----------------+
+|  decre_key/key_out_r               |                                  |                                                |                1 |              2 |
+|  incre_key/key_out_r               |                                  |                                                |                1 |              2 |
+|  left_key/key_out_r                |                                  |                                                |                1 |              2 |
+|  right_key/key_out_r               |                                  |                                                |                1 |              2 |
+|  clk_module/outsignal_time_OBUF    |                                  |                                                |                2 |              4 |
+|  clk_IBUF_BUFG                     |                                  |                                                |                3 |              6 |
+|  decre_key/test_signal             |                                  |                                                |                2 |              8 |
+|  decre_key/test_signal             | set_time/load_seconds[3]_i_1_n_0 |                                                |                1 |              8 |
+|  second_counter/CLK                | second_counter/E[0]              | second_counter/data0                           |                2 |             14 |
+|  clk_module/outsignal_counter_OBUF | second_counter/E[0]              | second_counter/data0                           |                5 |             16 |
+|  clk_IBUF_BUFG                     | song_player_module/number        | set_time/number_reg[0]                         |                4 |             20 |
+|  clk_IBUF_BUFG                     |                                  | second_counter/data0                           |                4 |             24 |
+|  clk_IBUF_BUFG                     |                                  | decre_key/counter_mod_100HZ/regN[0]_i_1__2_n_0 |                5 |             40 |
+|  clk_IBUF_BUFG                     |                                  | incre_key/counter_mod_100HZ/regN[0]_i_1__1_n_0 |                5 |             40 |
+|  clk_IBUF_BUFG                     |                                  | left_key/counter_mod_100HZ/regN[0]_i_1__0_n_0  |                5 |             40 |
+|  clk_IBUF_BUFG                     |                                  | right_key/counter_mod_100HZ/regN[0]_i_1_n_0    |                5 |             40 |
+|  clk_IBUF_BUFG                     |                                  | song_player_module/counter[0]_i_1__0_n_0       |                5 |             40 |
+|  clk_IBUF_BUFG                     |                                  | clk_module/counter[25]_i_1_n_0                 |                8 |             52 |
+|  clk_IBUF_BUFG                     |                                  | song_player_module/time1[0]_i_1_n_0            |                8 |             64 |
++------------------------------------+----------------------------------+------------------------------------------------+------------------+----------------+
+
+

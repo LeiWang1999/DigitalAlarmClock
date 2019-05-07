@@ -1,0 +1,521 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue May  7 16:13:42 2019
+# Process ID: 24048
+# Current directory: D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/synth_1
+# Command line: vivado.exe -log alarm_clock_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source alarm_clock_top.tcl
+# Log file: D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/synth_1/alarm_clock_top.vds
+# Journal file: D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source alarm_clock_top.tcl -notrace
+Command: synth_design -top alarm_clock_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19268 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 359.629 ; gain = 99.355
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alarm_clock_top' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/alarm_clock_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/debounce/debounce.v:23]
+	Parameter zero bound to: 3'b000 
+	Parameter wait1_1 bound to: 3'b001 
+	Parameter wait1_2 bound to: 3'b010 
+	Parameter wait1_3 bound to: 3'b011 
+	Parameter one bound to: 3'b100 
+	Parameter wait0_1 bound to: 3'b101 
+	Parameter wait0_2 bound to: 3'b110 
+	Parameter wait0_3 bound to: 3'b111 
+INFO: [Synth 8-6157] synthesizing module 'counter_mod_m' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/debounce/counter_mod_m.v:23]
+	Parameter N bound to: 20 - type: integer 
+	Parameter M bound to: 1000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter_mod_m' (1#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/debounce/counter_mod_m.v:23]
+INFO: [Synth 8-226] default block is never used [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/debounce/debounce.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (2#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/debounce/debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clock_generator' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/clock_generator.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'clock_generator' (3#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/clock_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'two_bit_counter' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/two_bit_counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'two_bit_counter' (4#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/two_bit_counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'two_four_decoder' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/two_four_decoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'two_four_decoder' (5#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/two_four_decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'counter_60' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/counter_60.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'counter_60' (6#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/counter_60.v:3]
+INFO: [Synth 8-6157] synthesizing module 'set_alarm' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/set_alarm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'set_alarm' (7#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/set_alarm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'display_clock' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/display_clock.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'display_clock' (8#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/display_clock.v:3]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_decoder' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/seven_seg_decoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_decoder' (9#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/seven_seg_decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'four_one_mux' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/four_one_mux.v:3]
+INFO: [Synth 8-226] default block is never used [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/four_one_mux.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'four_one_mux' (10#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/four_one_mux.v:3]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_display' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/seven_seg_display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_display' (11#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/seven_seg_display.v:3]
+INFO: [Synth 8-6157] synthesizing module 'check_alarm' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/check_alarm.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'check_alarm' (12#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/check_alarm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'song_player' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/song_player.v:3]
+	Parameter clockFrequency bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'music_sheet' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/music_sheet.v:3]
+	Parameter EIGHTH bound to: 5'b00001 
+	Parameter QUARTER bound to: 5'b00010 
+	Parameter HALF bound to: 5'b00100 
+	Parameter ONE bound to: 8 - type: integer 
+	Parameter TWO bound to: 16 - type: integer 
+	Parameter FOUR bound to: 32 - type: integer 
+	Parameter A3 bound to: 113636.363636 - type: float 
+	Parameter Csh4 bound to: 90192.470733 - type: float 
+	Parameter D4 bound to: 85131.016635 - type: float 
+	Parameter E4 bound to: 75843.761851 - type: float 
+	Parameter Fsh4 bound to: 67568.480655 - type: float 
+	Parameter G4 bound to: 63776.323678 - type: float 
+	Parameter A4 bound to: 56818.181818 - type: float 
+	Parameter B4 bound to: 50615.484289 - type: float 
+	Parameter SP bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'music_sheet' (13#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/music_sheet.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'song_player' (14#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/song_player.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'alarm_clock_top' (15#1) [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/alarm_clock_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 414.664 ; gain = 154.391
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 414.664 ; gain = 154.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 414.664 ; gain = 154.391
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/constrs_1/imports/src/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/constrs_1/imports/src/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/constrs_1/imports/src/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/alarm_clock_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/alarm_clock_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 761.980 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 761.980 ; gain = 501.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 761.980 ; gain = 501.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 761.980 ; gain = 501.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "m_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'debounce'
+INFO: [Synth 8-5544] ROM "key_out_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "outsignal_400" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "loop" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AN" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "duration" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/song_player.v:43]
+WARNING: [Synth 8-327] inferring latch for variable 'key_out_r_reg' [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/debounce/debounce.v:63]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                              000 |                              000
+                 wait1_1 |                              001 |                              001
+                 wait1_2 |                              010 |                              010
+                 wait1_3 |                              011 |                              011
+                     one |                              100 |                              100
+                 wait0_1 |                              101 |                              101
+                 wait0_2 |                              110 |                              110
+                 wait0_3 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'debounce'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 761.980 ; gain = 501.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 9     
+	   3 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 36    
+	  71 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   8 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module counter_mod_m 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module debounce 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 2     
+Module clock_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
+Module two_bit_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module two_four_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module counter_60 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module set_alarm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+Module display_clock 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+Module seven_seg_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+Module four_one_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module seven_seg_display 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module music_sheet 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  71 Input      2 Bit        Muxes := 1     
+Module song_player 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "counter_mod_100HZ/m_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "counter_mod_100HZ/m_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "counter_mod_100HZ/m_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "counter_mod_100HZ/m_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "outsignal_400" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "AN" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element number_reg_rep was removed.  [D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/song_player.v:18]
+DSP Report: Generating DSP time12, operation Mode is: (A:0xf5e100)*B.
+DSP Report: operator time12 is absorbed into DSP time12.
+DSP Report: operator time12 is absorbed into DSP time12.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\song_player_module/aud_sd_reg )
+WARNING: [Synth 8-3332] Sequential element (minutes_counter/loop_reg) is unused and will be removed from module alarm_clock_top.
+WARNING: [Synth 8-3332] Sequential element (song_player_module/aud_sd_reg) is unused and will be removed from module alarm_clock_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 761.980 ; gain = 501.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|music_sheet | note           | 1024x17       | LUT            | 
+|song_player | number_reg_rep | 1024x17       | Block RAM      | 
++------------+----------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|song_player | (A:0xf5e100)*B | 25     | 6      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance song_player_module/counter00/number_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 804.094 ; gain = 543.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 804.965 ; gain = 544.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance number_reg_rep (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   166|
+|3     |DSP48E1  |     1|
+|4     |LUT1     |    31|
+|5     |LUT2     |   150|
+|6     |LUT3     |   156|
+|7     |LUT4     |   313|
+|8     |LUT5     |    76|
+|9     |LUT6     |   104|
+|10    |RAMB18E1 |     1|
+|11    |FDCE     |    27|
+|12    |FDRE     |   181|
+|13    |LD       |     4|
+|14    |IBUF     |     9|
+|15    |OBUF     |    20|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------+----------------+------+
+|      |Instance              |Module          |Cells |
++------+----------------------+----------------+------+
+|1     |top                   |                |  1240|
+|2     |  clk_module          |clock_generator |   189|
+|3     |  decre_key           |debounce        |    43|
+|4     |    counter_mod_100HZ |counter_mod_m_6 |    37|
+|5     |  incre_key           |debounce_0      |    42|
+|6     |    counter_mod_100HZ |counter_mod_m_5 |    37|
+|7     |  left_key            |debounce_1      |    42|
+|8     |    counter_mod_100HZ |counter_mod_m_4 |    37|
+|9     |  minutes_counter     |counter_60      |    17|
+|10    |  right_key           |debounce_2      |    42|
+|11    |    counter_mod_100HZ |counter_mod_m   |    37|
+|12    |  second_counter      |counter_60_3    |    32|
+|13    |  set_time            |set_alarm       |    41|
+|14    |  song_player_module  |song_player     |   748|
+|15    |  two_counter         |two_bit_counter |    13|
++------+----------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 828.762 ; gain = 221.172
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 828.762 ; gain = 568.488
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 181 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 828.762 ; gain = 580.422
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/synth_1/alarm_clock_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file alarm_clock_top_utilization_synth.rpt -pb alarm_clock_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 828.762 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue May  7 16:14:31 2019...

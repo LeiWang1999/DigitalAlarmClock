@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557216818">
+  <File Type="PA-TCL" Name="alarm_clock_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="alarm_clock_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="alarm_clock_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="alarm_clock_top.vds"/>
+  <File Type="RDS-UTIL" Name="alarm_clock_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="alarm_clock_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="alarm_clock_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="alarm_clock_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="alarm_clock_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/src/check_alarm.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/check_alarm.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/clock_generator.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/clock_generator.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/counter_60.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/counter_60.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/debounce/counter_mod_m.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PrincelingModuleHub/debounce/counter_mod_m.v"/>
+        <Attr Name="ImportTime" Val="1552298168"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/debounce/debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PrincelingModuleHub/debounce/debounce.v"/>
+        <Attr Name="ImportTime" Val="1552298168"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/display_clock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/display_clock.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/four_one_mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/four_one_mux.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/music_sheet.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/music_sheet.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/set_alarm.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/set_alarm.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/seven_seg_decoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/seven_seg_decoder.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/seven_seg_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/seven_seg_display.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/song_player.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/song_player.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/two_bit_counter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/two_bit_counter.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/two_four_decoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/two_four_decoder.v"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alarm_clock_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="alarm_clock_top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/src/Nexys4DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/Nexys4DDR_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
