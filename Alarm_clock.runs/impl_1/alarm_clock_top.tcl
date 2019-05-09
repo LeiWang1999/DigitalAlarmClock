@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param simulator.modelsimInstallPath D:/SoftWare/ModelSIm/win64
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1

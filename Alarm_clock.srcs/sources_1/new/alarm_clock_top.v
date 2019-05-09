@@ -112,7 +112,7 @@ module alarm_clock_top(
     //  计数模块
     counter_60 second_counter(
         .rst_n(rst_n), 
-        .load(load_SW),             //   如果有效，保持原来的状态，计时停止 
+        .load(load_SW && set_SW),             //   如果有效，保持原来的状态，计时停止 
         .signal(outsignal_counter), 
         .ones(seconds_ones), 
         .tens(seconds_tens), 
@@ -121,7 +121,7 @@ module alarm_clock_top(
 
      counter_60 minutes_counter(
         .rst_n(rst_n), 
-        .load(load_SW),             //   如果有效，保持原来的状态，计时停止 
+        .load(load_SW && set_SW),             //   如果有效，保持原来的状态，计时停止 
         .signal(min), 
         .ones(minutes_ones), 
         .tens(minutes_tens), 
@@ -153,7 +153,7 @@ module alarm_clock_top(
  
     //  test_signal 表示任意按键被按下
     wire test_signal = moveRight_BTN_t | moveLeft_BTN_t | increment_BTN_t | decrement_BTN_t;
-    set_alarm set_time(
+    set_alarm set_alarm_module(
         .signal(test_signal), 
         .load(load_SW), 
         .moveRightBtn(moveRight_BTN), 
@@ -163,25 +163,41 @@ module alarm_clock_top(
         .load_seconds(load_minutes_ones), 
         .load_minutes(load_minutes_tens)
     );
-    
+
+
+    /******************************************************
+            时钟显示选择模块
+    ********************************************************/
+ 
+
     // display clock or set alarm
+    //  如果set有效，则显示
     //  如果load有效，则显示闹钟设置
-    //  如果load无效，则显示计时器
+    //  其他，则显示计时器
     display_clock clock_alarm(
-        load_SW, 
-        seconds_ones, minutes_ones, load_minutes_ones, 
-        seconds_tens, minutes_tens, load_minutes_tens,
-        out_seconds_ones, out_minutes_ones, 
-        out_seconds_tens, out_minutes_tens
+        .load(load_SW),
+        .set(set_SW),
+        .set_id(set_id),
+        .set_num(set_num), 
+        .seconds_ones(seconds_ones), 
+        .minutes_ones(minutes_ones), 
+        .load_minutes_ones(load_minutes_ones),
+        .seconds_tens(seconds_tens), 
+        .minutes_tens(minutes_tens), 
+        .load_minutes_tens(load_minutes_tens),
+        .out_seconds_ones(out_seconds_ones), 
+        .out_minutes_ones(out_minutes_ones), 
+        .out_seconds_tens(out_seconds_tens), 
+        .out_minutes_tens(out_minutes_tens)
     );
     
     /******************************************************
-           数码管
+           数码管显示部分
     ********************************************************/
  
 
     // seven segment decoder
-    seven_seg_decoder seconds_decoder(set_id, set_num, timer_seconds_ones, timer_seconds_tens);
+    seven_seg_decoder seconds_decoder(out_seconds_ones, out_seconds_tens, timer_seconds_ones, timer_seconds_tens);
     seven_seg_decoder minutes_decoder(out_minutes_ones, out_minutes_tens, timer_minutes_ones, timer_minutes_tens);
     
     // four to one multiplexer
