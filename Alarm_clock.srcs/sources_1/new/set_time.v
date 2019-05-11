@@ -21,7 +21,8 @@
 
 
 module set_time(
-        input               signal,
+        input               clk,         //  100Mhz输入时钟
+        input               rst_n,
         input               set,            //  设置模式使能
         input               incrementBtn, decrementBtn,
         input               enterBtn,
@@ -33,14 +34,18 @@ module set_time(
         parameter / wire /reg Define 
     */
 
-    localparam  IDLE           = 'b0000,
-                ID_MINUTES_TEN = 'b1000,
+    localparam  ID_MINUTES_TEN = 'b1000,
                 ID_MINUTES_ONE = 'b0100,
                 ID_SECONDS_TEN = 'b0010,
                 ID_SECONDS_ONE = 'b0001;
 
     reg     [3:0]   set_id_r   = 4'b0001;
     reg     [3:0]   set_num_r  = 4'b0000;
+    wire            enterBtn_pos;
+    wire            incrementBtn_pos;
+    wire            decrementBtn_pos;
+    reg     [3:0]   current_state,next_state;
+
 
 
 
@@ -49,31 +54,78 @@ module set_time(
                 Main    Code
     */
 
-    always @(posedge signal) begin
-        if (set) begin
-            if(set_id == ID_MINUTES_ONE || set_id == ID_SECONDS_ONE) begin
+    edge_detect enterBtn_pos_edge_detect(
+        .clk(clk),
+        .rst_n(rst_n),
+        .signal(enterBtn),
+        .pos_tick(enterBtn_pos)
+    );  //  检测确定按键的上升沿
 
-                if(incrementBtn) begin
+    edge_detect incrementBtn_pos_edge_detect(
+        .clk(clk),
+        .rst_n(rst_n),
+        .signal(incrementBtn),
+        .pos_tick(incrementBtn_pos)
+    );  //  检测确定按键的上升沿
+
+    edge_detect decrementBtn_pos_edge_detect(
+        .clk(clk),
+        .rst_n(rst_n),
+        .signal(decrementBtn),
+        .pos_tick(decrementBtn_pos)
+    );  //  检测确定按键的上升沿
+
+
+
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            current_state   <=  ID_MINUTES_TEN;   
+        else 
+            if(enterBtn_pos)
+            current_state   <=  next_state;
+        end
+
+
+    always @(*) begin
+        next_state = current_state;
+        case (current_state)
+            ID_MINUTES_TEN: next_state = ID_MINUTES_ONE;
+            ID_MINUTES_ONE: next_state = ID_SECONDS_TEN;
+            ID_SECONDS_TEN: next_state = ID_SECONDS_ONE;
+            ID_SECONDS_ONE: next_state = ID_MINUTES_TEN;
+            default: next_state = ID_MINUTES_ONE;
+        endcase        
+    end
+
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            set_num_r <= 0;
+        else if(set)
+           if(current_state == ID_MINUTES_ONE || current_state == ID_SECONDS_ONE) begin
+
+                if(incrementBtn_pos) begin
                     if(set_num_r == 9)
                         set_num_r = 0;
                     else
                         set_num_r = set_num_r + 1;
                 end
-                if(decrementBtn) begin
+                if(decrementBtn_pos) begin
                     if(set_num_r == 0)
                         set_num_r = 9;
                     else
                         set_num_r = set_num_r - 1;
                 end
             end
-            else if(set_id == ID_MINUTES_TEN || set_id == ID_SECONDS_TEN) begin
-                if(incrementBtn) begin
+            else if(current_state == ID_MINUTES_TEN || current_state == ID_SECONDS_TEN) begin
+                if(incrementBtn_pos) begin
                     if(set_num_r == 5)
                         set_num_r = 0;
                     else
                         set_num_r = set_num_r + 1;
                 end
-                if(decrementBtn) begin
+                if(decrementBtn_pos) begin
                     if(set_num_r == 0)
                         set_num_r = 5;
                     else
@@ -81,26 +133,11 @@ module set_time(
                 end    
             end
         end
-    end
-
-    always @(posedge signal) begin
-        if (set) begin
-            case (set_id)
-            IDLE          : set_id_r = ID_MINUTES_TEN;
-            ID_MINUTES_TEN: if(enterBtn)set_id_r = ID_MINUTES_ONE;
-            ID_MINUTES_ONE: if(enterBtn)set_id_r = ID_SECONDS_TEN;
-            ID_SECONDS_TEN: if(enterBtn)set_id_r = ID_SECONDS_ONE;
-            ID_SECONDS_ONE: if(enterBtn)set_id_r = IDLE;
-                default: set_id_r = IDLE;
-            endcase
-        end
-    end
 
 
 
 
-    assign  set_id  = set_id_r;
     assign  set_num = set_num_r;
-
+    assign  set_id  = current_state;
 
 endmodule

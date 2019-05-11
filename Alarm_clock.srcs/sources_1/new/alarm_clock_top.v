@@ -26,7 +26,8 @@ module alarm_clock_top(
     input moveRight_BTN, moveLeft_BTN, increment_BTN, decrement_BTN,
     output outsignal_counter, outsignal_time,
     output [7:0] timer_seven_seg, AN,
-    output audioOut, aud_sd
+    output audioOut, aud_sd,
+    output  [7:0]   test_leds
     );
 
 
@@ -42,7 +43,6 @@ module alarm_clock_top(
     
     wire [1:0] two_bit_count;
     wire [3:0] enable_signal;
-    
     wire moveRight_BTN_t, moveLeft_BTN_t, increment_BTN_t, decrement_BTN_t;
 
 
@@ -84,6 +84,8 @@ module alarm_clock_top(
         .key_out(decrement_BTN_t)
     );
 
+
+
     /******************************************************
            时钟产生电路
     ********************************************************/
@@ -111,8 +113,12 @@ module alarm_clock_top(
  
     //  计数模块
     counter_60 second_counter(
+        .clk(clk),
         .rst_n(rst_n), 
-        .load(load_SW && set_SW),             //   如果有效，保持原来的状态，计时停止 
+        .load(load_SW),             //   如果有效，保持原来的状态，计时停止 
+        .set(set_SW),
+        .set_id(set_id[1:0]),
+        .set_num(set_num),
         .signal(outsignal_counter), 
         .ones(seconds_ones), 
         .tens(seconds_tens), 
@@ -120,8 +126,12 @@ module alarm_clock_top(
         );
 
      counter_60 minutes_counter(
+        .clk(clk),
         .rst_n(rst_n), 
-        .load(load_SW && set_SW),             //   如果有效，保持原来的状态，计时停止 
+        .load(load_SW),             //   如果有效，保持原来的状态，计时停止 
+        .set(set_SW),
+        .set_id(set_id[3:2]),
+        .set_num(set_num),
         .signal(min), 
         .ones(minutes_ones), 
         .tens(minutes_tens), 
@@ -134,17 +144,18 @@ module alarm_clock_top(
             设置时间
     ********************************************************/
     
-    wire    set_signal = moveRight_BTN_t | increment_BTN_t | decrement_BTN_t;
 
     set_time set_time_module(
-        .signal(set_signal),
+        .clk(clk),
         .set(set_SW),            //  设置模式使能
+        .rst_n(rst_n),
         .incrementBtn(increment_BTN_t), 
         .decrementBtn(decrement_BTN_t),
         .enterBtn(moveRight_BTN_t),
         .set_num(set_num),
         .set_id(set_id)
     );
+    
 
 
     /******************************************************
@@ -219,4 +230,6 @@ module alarm_clock_top(
     check_alarm check_alarm_module(minutes_ones, load_minutes_ones, minutes_tens, load_minutes_tens, load_SW, alarm_off_SW, play_sound);
     song_player song_player_module(clk, rst_n, play_sound, audioOut, aud_sd);
     
+    assign  test_leds[3:0]  =   set_num;
+    assign  test_leds[7:4]  =   set_id;
 endmodule

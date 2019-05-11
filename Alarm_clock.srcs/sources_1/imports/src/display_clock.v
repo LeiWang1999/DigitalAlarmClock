@@ -63,12 +63,6 @@ module display_clock(
                     out_seconds_tens = set_seconds_tens_r;
                     out_seconds_ones = set_seconds_ones_r;  
                 end
-                default: begin
-                    out_minutes_tens = 0;
-                    out_minutes_ones = 0;
-                    out_seconds_tens = 0;
-                    out_seconds_ones = 0;
-                end  
             endcase
         end
         else if(load) begin
@@ -86,7 +80,6 @@ module display_clock(
     end
 
     always @(*) begin
-        if (set) begin
             case (set_id)
                 'b1000:     begin
                     set_minutes_tens_r = set_num;
@@ -100,8 +93,14 @@ module display_clock(
                 'b0001:     begin   
                     set_seconds_ones_r = set_num;
                 end
+                default:    begin
+                    set_minutes_tens_r = set_minutes_tens_r;
+                    set_minutes_ones_r = set_minutes_ones_r;
+                    set_seconds_tens_r = set_seconds_tens_r;
+                    set_seconds_ones_r = set_seconds_ones_r;    
+                    end                                                                            
             endcase
-        end
+
     end
 
     
