@@ -22,7 +22,7 @@
 
 module alarm_clock_top(
     input clk, 
-    input rst_n, load_SW, fastfwd_SW, alarm_off_SW, set_SW,
+    input rst_n, load_SW, fastfwd_SW, alarm_off_SW, set_BTN,
     input moveRight_BTN, moveLeft_BTN, increment_BTN, decrement_BTN,
     output outsignal_counter, outsignal_time,
     output [7:0] timer_seven_seg, AN,
@@ -44,7 +44,8 @@ module alarm_clock_top(
     wire [1:0] two_bit_count;
     wire [3:0] enable_signal;
     wire moveRight_BTN_t, moveLeft_BTN_t, increment_BTN_t, decrement_BTN_t;
-
+    wire set_BTN_t;
+    wire set_status;
 
     wire    [3:0]   set_num;
     wire    [3:0]   set_id;
@@ -84,6 +85,13 @@ module alarm_clock_top(
         .key_out(decrement_BTN_t)
     );
 
+    debounce    set_key(
+        .clk(clk),
+        .rst_n(rst_n),
+        .key_in(set_BTN),
+        .key_out(set_BTN_t)
+    );
+
 
 
     /******************************************************
@@ -116,7 +124,7 @@ module alarm_clock_top(
         .clk(clk),
         .rst_n(rst_n), 
         .load(load_SW),             //   如果有效，保持原来的状态，计时停止 
-        .set(set_SW),
+        .set(set_status),
         .set_id(set_id[1:0]),
         .set_num(set_num),
         .signal(outsignal_counter), 
@@ -129,7 +137,7 @@ module alarm_clock_top(
         .clk(clk),
         .rst_n(rst_n), 
         .load(load_SW),             //   如果有效，保持原来的状态，计时停止 
-        .set(set_SW),
+        .set(set_status),
         .set_id(set_id[3:2]),
         .set_num(set_num),
         .signal(min), 
@@ -147,7 +155,7 @@ module alarm_clock_top(
 
     set_time set_time_module(
         .clk(clk),
-        .set(set_SW),            //  设置模式使能
+        .set(set_status),            //  设置模式使能
         .rst_n(rst_n),
         .incrementBtn(increment_BTN_t), 
         .decrementBtn(decrement_BTN_t),
@@ -187,7 +195,7 @@ module alarm_clock_top(
     //  其他，则显示计时器
     display_clock clock_alarm(
         .load(load_SW),
-        .set(set_SW),
+        .set(set_status),
         .set_id(set_id),
         .set_num(set_num), 
         .seconds_ones(seconds_ones), 
@@ -201,7 +209,23 @@ module alarm_clock_top(
         .out_seconds_tens(out_seconds_tens), 
         .out_minutes_tens(out_minutes_tens)
     );
-    
+
+
+    /******************************************************
+           时钟设置信号产生电路
+    ********************************************************/
+
+   set_signal_detect    U0_set_signal_detect(
+        .clk(clk),
+        .rst_n(rst_n),
+        .other_btn(test_signal),
+        .second_clk(outsignal_counter),
+        .set_btn(set_BTN_t),
+
+        .set_status(set_status)  //  检测是否是 set 阶段的输出 高电平有效
+    );
+
+
     /******************************************************
            数码管显示部分
     ********************************************************/
@@ -227,9 +251,13 @@ module alarm_clock_top(
     ********************************************************/
  
 
+
     check_alarm check_alarm_module(minutes_ones, load_minutes_ones, minutes_tens, load_minutes_tens, load_SW, alarm_off_SW, play_sound);
     song_player song_player_module(clk, rst_n, play_sound, audioOut, aud_sd);
     
     assign  test_leds[3:0]  =   set_num;
     assign  test_leds[7:4]  =   set_id;
-endmodule
+
+
+
+    endmodule

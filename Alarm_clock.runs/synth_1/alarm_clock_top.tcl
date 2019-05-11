@@ -42,6 +42,7 @@ read_verilog -library xil_defaultlib {
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/four_one_mux.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/music_sheet.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/set_alarm.v
+  D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_signal_detect.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_time.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/seven_seg_decoder.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/seven_seg_display.v

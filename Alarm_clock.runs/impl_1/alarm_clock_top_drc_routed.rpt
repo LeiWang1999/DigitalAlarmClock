@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sat May 11 16:41:30 2019
+| Date         : Sat May 11 17:31:02 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_drc -file alarm_clock_top_drc_routed.rpt -pb alarm_clock_top_drc_routed.pb -rpx alarm_clock_top_drc_routed.rpx
 | Design       : alarm_clock_top
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 35
+             Violations found: 36
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -32,7 +32,7 @@ Table of Contents
 | DPIP-1      | Warning  | Input pipelining                                            | 1          |
 | DPOP-1      | Warning  | PREG Output pipelining                                      | 1          |
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 10         |
+| PDRC-153    | Warning  | Gated clock check                                           | 11         |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
 | REQP-1840   | Warning  | RAMB18 async control check                                  | 20         |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -66,12 +66,12 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net incre_key/key_out_r is a gated clock net sourced by a combinational pin incre_key/key_out_r_reg_i_1__1/O, cell incre_key/key_out_r_reg_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net decre_key/test_signal is a gated clock net sourced by a combinational pin decre_key/load_seconds[3]_i_3/O, cell decre_key/load_seconds[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net incre_key/test_signal is a gated clock net sourced by a combinational pin incre_key/load_seconds[3]_i_3/O, cell incre_key/load_seconds[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net incre_key/key_out_r is a gated clock net sourced by a combinational pin incre_key/key_out_r_reg_i_1__1/O, cell incre_key/key_out_r_reg_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
@@ -86,32 +86,37 @@ Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net set_time_module/D[0] is a gated clock net sourced by a combinational pin set_time_module/current_state[0]_i_1/O, cell set_time_module/current_state[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_key/key_out_r is a gated clock net sourced by a combinational pin set_key/key_out_r_reg_i_1__3/O, cell set_key/key_out_r_reg_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net set_time_module/D[1] is a gated clock net sourced by a combinational pin set_time_module/current_state[1]_i_1/O, cell set_time_module/current_state[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_time_module/D[0] is a gated clock net sourced by a combinational pin set_time_module/current_state[0]_i_1/O, cell set_time_module/current_state[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net set_time_module/D[2] is a gated clock net sourced by a combinational pin set_time_module/current_state[3]_i_2/O, cell set_time_module/current_state[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_time_module/D[1] is a gated clock net sourced by a combinational pin set_time_module/current_state[1]_i_1/O, cell set_time_module/current_state[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net set_time_module/timer_seven_seg[1][0] is a gated clock net sourced by a combinational pin set_time_module/set_minutes_tens_r_reg[3]_i_1/O, cell set_time_module/set_minutes_tens_r_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_time_module/D[2] is a gated clock net sourced by a combinational pin set_time_module/current_state[3]_i_2/O, cell set_time_module/current_state[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net set_time_module/timer_seven_seg[1]_0[0] is a gated clock net sourced by a combinational pin set_time_module/out_seconds_ones_reg[3]_i_2/O, cell set_time_module/out_seconds_ones_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_time_module/timer_seven_seg[1][0] is a gated clock net sourced by a combinational pin set_time_module/out_seconds_ones_reg[3]_i_2/O, cell set_time_module/out_seconds_ones_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net set_time_module/timer_seven_seg[5][0] is a gated clock net sourced by a combinational pin set_time_module/set_minutes_tens_r_reg[3]_i_1/O, cell set_time_module/set_minutes_tens_r_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT incre_key/load_seconds[3]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
+A LUT decre_key/load_seconds[3]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
     set_alarm_module/currentPos_reg {FDRE}
     set_alarm_module/load_minutes_reg[0] {FDRE}
     set_alarm_module/load_minutes_reg[1] {FDRE}
@@ -125,102 +130,102 @@ Related violations: <none>
 
 REQP-1840#1 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#2 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#3 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#4 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#5 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#6 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#7 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#8 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#9 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#10 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#11 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#12 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#13 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#14 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#15 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#16 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#17 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#18 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#19 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#20 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 

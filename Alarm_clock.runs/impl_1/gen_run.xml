@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557563922">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557566900">
   <File Type="BITSTR-BMM" Name="alarm_clock_top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="alarm_clock_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="alarm_clock_top_timing_summary_init.rpt"/>
@@ -156,6 +156,13 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/set_alarm.v"/>
         <Attr Name="ImportTime" Val="1542268897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/set_signal_detect.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

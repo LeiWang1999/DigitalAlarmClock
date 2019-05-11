@@ -16,7 +16,7 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 
 ##Switches
 
-set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports set_SW]
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports fastfwd_SW]
 set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports load_SW]
 set_property -dict {PACKAGE_PIN M13 IOSTANDARD LVCMOS33} [get_ports alarm_off_SW]
 #set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { moveLeftBtn }]; #IO_L13N_T2_MRCC_14 Sch=sw[3]
@@ -87,7 +87,7 @@ set_property -dict {PACKAGE_PIN U13 IOSTANDARD LVCMOS33} [get_ports {AN[7]}]
 
 set_property -dict {PACKAGE_PIN C12 IOSTANDARD LVCMOS33} [get_ports rst_n]
 
-set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports fastfwd_SW]
+set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports set_BTN]
 set_property -dict {PACKAGE_PIN M18 IOSTANDARD LVCMOS33} [get_ports increment_BTN]
 set_property -dict {PACKAGE_PIN P17 IOSTANDARD LVCMOS33} [get_ports moveLeft_BTN]
 set_property -dict {PACKAGE_PIN M17 IOSTANDARD LVCMOS33} [get_ports moveRight_BTN]

@@ -12,8 +12,8 @@ source alarm_clock_top.tcl -notrace
 Command: link_design -top alarm_clock_top -part xc7a100tcsg324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 192 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -28,7 +28,7 @@ No Unisim elements were transformed.
 
 7 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 580.113 ; gain = 327.586
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 581.129 ; gain = 328.574
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -39,61 +39,61 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.963 . Memory (MB): peak = 594.539 ; gain = 14.426
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.970 . Memory (MB): peak = 594.098 ; gain = 12.969
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: c1942707
+Ending Cache Timing Information Task | Checksum: da9dd35b
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1087.492 ; gain = 492.953
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1088.691 ; gain = 494.594
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1ddf45715
+Phase 1 Retarget | Checksum: b9d585b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.475 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1088.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 184276063
+Phase 2 Constant propagation | Checksum: 1352a0ba9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.537 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.182 . Memory (MB): peak = 1088.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 12046722b
+Phase 3 Sweep | Checksum: fe77c1c2
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.647 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.235 . Memory (MB): peak = 1088.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 12046722b
+Phase 4 BUFG optimization | Checksum: fe77c1c2
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.749 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.299 . Memory (MB): peak = 1088.691 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 16efd47bc
+Phase 5 Shift Register Optimization | Checksum: 12efdbaaf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.913 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.420 . Memory (MB): peak = 1088.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 16efd47bc
+Phase 6 Post Processing Netlist | Checksum: 12efdbaaf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.922 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.430 . Memory (MB): peak = 1088.691 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1087.492 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 16efd47bc
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1088.691 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 12efdbaaf
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.956 . Memory (MB): peak = 1087.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.440 . Memory (MB): peak = 1088.691 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -112,27 +112,27 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 16efd47bc
+Ending PowerOpt Patch Enables Task | Checksum: 12efdbaaf
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 16efd47bc
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 12efdbaaf
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1230.824 ; gain = 143.332
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1231.211 ; gain = 142.520
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 16efd47bc
+Ending Final Cleanup Task | Checksum: 12efdbaaf
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 29 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1230.824 ; gain = 650.711
-Writing placer database...
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1231.211 ; gain = 650.082
 INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/alarm_clock_top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file alarm_clock_top_drc_opted.rpt -pb alarm_clock_top_drc_opted.pb -rpx alarm_clock_top_drc_opted.rpx
 Command: report_drc -file alarm_clock_top_drc_opted.rpt -pb alarm_clock_top_drc_opted.pb -rpx alarm_clock_top_drc_opted.rpx
@@ -142,7 +142,6 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/dat
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/alarm_clock_top_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1230.824 ; gain = 0.000
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -152,26 +151,26 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
@@ -181,132 +180,132 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 81bab489
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 118f68426
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.207 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-WARNING: [Place 30-568] A LUT 'incre_key/load_seconds[3]_i_3' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
-	set_alarm_module/load_seconds_reg[3] {FDRE}
-	set_alarm_module/load_minutes_reg[0] {FDRE}
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Place 30-568] A LUT 'decre_key/load_seconds[3]_i_3' is driving clock pin of 8 registers. This could lead to large hold time violations. First few involved registers are:
 	set_alarm_module/currentPos_reg {FDRE}
+	set_alarm_module/load_minutes_reg[0] {FDRE}
 	set_alarm_module/load_minutes_reg[2] {FDRE}
 	set_alarm_module/load_minutes_reg[1] {FDRE}
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11af6fd97
+	set_alarm_module/load_seconds_reg[0] {FDRE}
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 14adf069c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 165246028
+Phase 1.3 Build Placer Netlist Model | Checksum: 18906e8cc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 165246028
+Phase 1.4 Constrain Clocks/Macros | Checksum: 18906e8cc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 165246028
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 18906e8cc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 165246028
+Phase 2.1 Floorplanning | Checksum: 18906e8cc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1231.211 ; gain = 0.000
 WARNING: [Place 46-29] place_design is not in timing mode. Skip physical synthesis in placer
-Phase 2 Global Placement | Checksum: 24c69ee10
+Phase 2 Global Placement | Checksum: 20aba8fb8
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 24c69ee10
+Phase 3.1 Commit Multi Column Macros | Checksum: 20aba8fb8
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14d9a0d0d
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 227c8d960
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1fa926ca0
+Phase 3.3 Area Swap Optimization | Checksum: 224a97278
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1fa926ca0
+Phase 3.4 Pipeline Register Optimization | Checksum: 224a97278
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1c6ec156c
+Phase 3.5 Small Shape Detail Placement | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 1c6ec156c
+Phase 3.6 Re-assign LUT pins | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 1c6ec156c
+Phase 3.7 Pipeline Register Optimization | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1c6ec156c
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 Post Commit Optimization
-Phase 4.1 Post Commit Optimization | Checksum: 1c6ec156c
+Phase 4.1 Post Commit Optimization | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1c6ec156c
+Phase 4.2 Post Placement Cleanup | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1c6ec156c
+Phase 4.3 Placer Reporting | Checksum: 22793f3d2
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 16f4a897f
+Phase 4.4 Final Placement Cleanup | Checksum: 1863ab07f
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 16f4a897f
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1863ab07f
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
-Ending Placer Task | Checksum: 11e418d29
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
+Ending Placer Task | Checksum: 138af1c07
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 47 Infos, 25 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1230.824 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1230.824 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.247 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/alarm_clock_top_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file alarm_clock_top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 1230.824 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file alarm_clock_top_utilization_placed.rpt -pb alarm_clock_top_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1230.824 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1231.211 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file alarm_clock_top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1230.824 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1231.211 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -318,68 +317,68 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: c1439298 ConstDB: 0 ShapeSum: 5cfdfa91 RouteDB: 0
+Checksum: PlaceDB: e5e7dbb2 ConstDB: 0 ShapeSum: 52c74055 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 1844656ab
+Phase 1 Build RT Design | Checksum: 123fc7dd5
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 1303.363 ; gain = 72.539
-Post Restoration Checksum: NetGraph: cb529c3a NumContArr: b8f3ba71 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 1307.801 ; gain = 76.590
+Post Restoration Checksum: NetGraph: c578d945 NumContArr: 5e83a490 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 1844656ab
+Phase 2.1 Fix Topology Constraints | Checksum: 123fc7dd5
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1308.781 ; gain = 77.957
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 1313.953 ; gain = 82.742
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 1844656ab
+Phase 2.2 Pre Route Cleanup | Checksum: 123fc7dd5
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1308.781 ; gain = 77.957
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 1313.953 ; gain = 82.742
  Number of Nodes with overlaps = 0
-Phase 2 Router Initialization | Checksum: 1c1c2bb84
+Phase 2 Router Initialization | Checksum: 16c65b19a
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 30ef2d38
+Phase 3 Initial Routing | Checksum: 12ea0f5af
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 76
+ Number of Nodes with overlaps = 72
  Number of Nodes with overlaps = 0
-Phase 4.1 Global Iteration 0 | Checksum: 4aa1aa70
+Phase 4.1 Global Iteration 0 | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
-Phase 4 Rip-up And Reroute | Checksum: 4aa1aa70
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
+Phase 4 Rip-up And Reroute | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 5 Delay and Skew Optimization
-Phase 5 Delay and Skew Optimization | Checksum: 4aa1aa70
+Phase 5 Delay and Skew Optimization | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
-Phase 6.1 Hold Fix Iter | Checksum: 4aa1aa70
+Phase 6.1 Hold Fix Iter | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
-Phase 6 Post Hold Fix | Checksum: 4aa1aa70
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
+Phase 6 Post Hold Fix | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.15002 %
-  Global Horizontal Routing Utilization  = 0.179383 %
+  Global Vertical Routing Utilization    = 0.140836 %
+  Global Horizontal Routing Utilization  = 0.147272 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -389,10 +388,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 30.6306%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 29.7297%, No Congested Regions.
 South Dir 1x1 Area, Max Cong = 22.5225%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 39.7059%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 33.8235%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 20.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 32.3529%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -414,36 +413,36 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 4aa1aa70
+Phase 7 Route finalize | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 4aa1aa70
+Phase 8 Verifying routed nets | Checksum: 8c60f6c5
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 80343804
+Phase 9 Depositing Routes | Checksum: 12531a90b
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1325.234 ; gain = 94.410
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 1328.793 ; gain = 97.582
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 60 Infos, 25 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 1325.234 ; gain = 94.410
+route_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:40 . Memory (MB): peak = 1328.793 ; gain = 97.582
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.223 . Memory (MB): peak = 1325.234 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.250 . Memory (MB): peak = 1328.793 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/alarm_clock_top_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file alarm_clock_top_drc_routed.rpt -pb alarm_clock_top_drc_routed.pb -rpx alarm_clock_top_drc_routed.rpx
 Command: report_drc -file alarm_clock_top_drc_routed.rpt -pb alarm_clock_top_drc_routed.pb -rpx alarm_clock_top_drc_routed.rpx
@@ -488,16 +487,17 @@ WARNING: [DRC DPIP-1] Input pipelining: DSP song_player_module/time12 input song
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP song_player_module/time12 output song_player_module/time12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP song_player_module/time12 multiplier stage song_player_module/time12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC PDRC-153] Gated clock check: Net decre_key/key_out_r is a gated clock net sourced by a combinational pin decre_key/key_out_r_reg_i_1__2/O, cell decre_key/key_out_r_reg_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net decre_key/test_signal is a gated clock net sourced by a combinational pin decre_key/load_seconds[3]_i_3/O, cell decre_key/load_seconds[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net incre_key/key_out_r is a gated clock net sourced by a combinational pin incre_key/key_out_r_reg_i_1__1/O, cell incre_key/key_out_r_reg_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net incre_key/test_signal is a gated clock net sourced by a combinational pin incre_key/load_seconds[3]_i_3/O, cell incre_key/load_seconds[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net left_key/key_out_r is a gated clock net sourced by a combinational pin left_key/key_out_r_reg_i_1__0/O, cell left_key/key_out_r_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net right_key/key_out_r is a gated clock net sourced by a combinational pin right_key/key_out_r_reg_i_1/O, cell right_key/key_out_r_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net set_key/key_out_r is a gated clock net sourced by a combinational pin set_key/key_out_r_reg_i_1__3/O, cell set_key/key_out_r_reg_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/D[0] is a gated clock net sourced by a combinational pin set_time_module/current_state[0]_i_1/O, cell set_time_module/current_state[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/D[1] is a gated clock net sourced by a combinational pin set_time_module/current_state[1]_i_1/O, cell set_time_module/current_state[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/D[2] is a gated clock net sourced by a combinational pin set_time_module/current_state[3]_i_2/O, cell set_time_module/current_state[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/timer_seven_seg[1][0] is a gated clock net sourced by a combinational pin set_time_module/set_minutes_tens_r_reg[3]_i_1/O, cell set_time_module/set_minutes_tens_r_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/timer_seven_seg[1]_0[0] is a gated clock net sourced by a combinational pin set_time_module/out_seconds_ones_reg[3]_i_2/O, cell set_time_module/out_seconds_ones_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT incre_key/load_seconds[3]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
+WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/timer_seven_seg[1][0] is a gated clock net sourced by a combinational pin set_time_module/out_seconds_ones_reg[3]_i_2/O, cell set_time_module/out_seconds_ones_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net set_time_module/timer_seven_seg[5][0] is a gated clock net sourced by a combinational pin set_time_module/set_minutes_tens_r_reg[3]_i_1/O, cell set_time_module/set_minutes_tens_r_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT decre_key/load_seconds[3]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. First few involved cells are:
     set_alarm_module/currentPos_reg {FDRE}
     set_alarm_module/load_minutes_reg[0] {FDRE}
     set_alarm_module/load_minutes_reg[1] {FDRE}
@@ -506,27 +506,27 @@ WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold viol
     set_alarm_module/load_seconds_reg[1] {FDRE}
     set_alarm_module/load_seconds_reg[2] {FDRE}
     set_alarm_module/load_seconds_reg[3] {FDRE}
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_2) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_1) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 35 Warnings
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[12] (net: song_player_module_n_4) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[13] (net: song_player_module_n_3) which is driven by a register (minutes_counter/tens_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 36 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -538,9 +538,9 @@ Creating bitstream...
 Writing bitstream ./alarm_clock_top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat May 11 16:41:56 2019. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat May 11 17:31:27 2019. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-91 Infos, 62 Warnings, 1 Critical Warnings and 0 Errors encountered.
+91 Infos, 63 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1775.531 ; gain = 426.254
-INFO: [Common 17-206] Exiting Vivado at Sat May 11 16:41:56 2019...
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1766.422 ; gain = 413.770
+INFO: [Common 17-206] Exiting Vivado at Sat May 11 17:31:27 2019...
