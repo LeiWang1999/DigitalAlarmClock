@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sat May 11 17:31:03 2019
+| Date         : Sun May 12 16:38:23 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file alarm_clock_top_methodology_drc_routed.rpt -pb alarm_clock_top_methodology_drc_routed.pb -rpx alarm_clock_top_methodology_drc_routed.rpx
 | Design       : alarm_clock_top

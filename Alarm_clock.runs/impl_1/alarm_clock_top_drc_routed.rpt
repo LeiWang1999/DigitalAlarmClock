@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sat May 11 17:31:02 2019
+| Date         : Sun May 12 16:38:21 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_drc -file alarm_clock_top_drc_routed.rpt -pb alarm_clock_top_drc_routed.pb -rpx alarm_clock_top_drc_routed.rpx
 | Design       : alarm_clock_top
@@ -106,12 +106,12 @@ Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net set_time_module/timer_seven_seg[1][0] is a gated clock net sourced by a combinational pin set_time_module/out_seconds_ones_reg[3]_i_2/O, cell set_time_module/out_seconds_ones_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_time_module/timer_seven_seg[5][0] is a gated clock net sourced by a combinational pin set_time_module/set_minutes_tens_r_reg[3]_i_1/O, cell set_time_module/set_minutes_tens_r_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net set_time_module/timer_seven_seg[5][0] is a gated clock net sourced by a combinational pin set_time_module/set_minutes_tens_r_reg[3]_i_1/O, cell set_time_module/set_minutes_tens_r_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net set_time_module/timer_seven_seg[5]_1[0] is a gated clock net sourced by a combinational pin set_time_module/out_seconds_ones_reg[3]_i_2/O, cell set_time_module/out_seconds_ones_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
@@ -145,12 +145,12 @@ Related violations: <none>
 
 REQP-1840#4 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/ones_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#5 Warning
 RAMB18 async control check  
-The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 number_reg_rep has an input control pin number_reg_rep/ADDRARDADDR[11] (net: song_player_module_n_5) which is driven by a register (minutes_counter/tens_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1840#6 Warning

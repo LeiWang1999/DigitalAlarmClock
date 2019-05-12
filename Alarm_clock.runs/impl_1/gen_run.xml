@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557566900">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557650128">
   <File Type="BITSTR-BMM" Name="alarm_clock_top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="alarm_clock_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="alarm_clock_top_timing_summary_init.rpt"/>
@@ -71,28 +71,22 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/src/check_alarm.v">
+    <File Path="$PSRCDIR/sources_1/new/check_alarm.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/check_alarm.v"/>
-        <Attr Name="ImportTime" Val="1542268897"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/clock_generator.v">
+    <File Path="$PSRCDIR/sources_1/new/clock_generator.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/clock_generator.v"/>
-        <Attr Name="ImportTime" Val="1542268897"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/counter_60.v">
+    <File Path="$PSRCDIR/sources_1/new/counter_60.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/counter_60.v"/>
-        <Attr Name="ImportTime" Val="1542268897"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -125,6 +119,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/dot_mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/edge_detect/edge_detect.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../PrincelingModuleHub/edge_detect/edge_detect.v"/>
@@ -152,10 +153,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/set_alarm.v">
+    <File Path="$PSRCDIR/sources_1/new/set_alarm.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/set_alarm.v"/>
-        <Attr Name="ImportTime" Val="1542268897"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -202,19 +201,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/two_bit_counter.v">
+    <File Path="$PSRCDIR/sources_1/new/two_bit_counter.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/two_bit_counter.v"/>
-        <Attr Name="ImportTime" Val="1542268897"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/two_four_decoder.v">
+    <File Path="$PSRCDIR/sources_1/new/two_four_decoder.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../DOC/Alarm-Clock-master/Alarm-Clock-master/src/two_four_decoder.v"/>
-        <Attr Name="ImportTime" Val="1542268897"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

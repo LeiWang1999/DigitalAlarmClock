@@ -44,7 +44,7 @@ set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {timer_seven
 set_property src_info {type:XDC file:1 line:72 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {timer_seven_seg[0]}]
 set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {timer_seven_seg[7]}]
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {dot}]
 set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN J17 IOSTANDARD LVCMOS33} [get_ports {AN[0]}]
 set_property src_info {type:XDC file:1 line:77 export:INPUT save:INPUT read:READ} [current_design]

@@ -25,8 +25,10 @@ module alarm_clock_top(
     input rst_n, load_SW, fastfwd_SW, alarm_off_SW, set_BTN,
     input moveRight_BTN, moveLeft_BTN, increment_BTN, decrement_BTN,
     output outsignal_counter, outsignal_time,
-    output [7:0] timer_seven_seg, AN,
+    output [6:0] timer_seven_seg,
+    output [7:0] AN,
     output audioOut, aud_sd,
+    output  dot,        //  分钟与秒钟间隔的小数点
     output  [7:0]   test_leds
     );
 
@@ -245,6 +247,12 @@ module alarm_clock_top(
 
     //  设置段选    100hz切换一次
     seven_seg_display display(enable_signal, AN);
+
+    //  小数点显示选择
+    dot_mux U0_dot_mux(
+        .select(two_bit_count),
+        .dot(dot)
+    );
 
     /******************************************************
             蜂鸣器部分

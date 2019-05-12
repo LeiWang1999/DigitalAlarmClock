@@ -71,7 +71,7 @@ set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {timer_seven
 set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {timer_seven_seg[1]}]
 set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {timer_seven_seg[0]}]
 
-set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {timer_seven_seg[7]}]
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {dot}]
 
 set_property -dict {PACKAGE_PIN J17 IOSTANDARD LVCMOS33} [get_ports {AN[0]}]
 set_property -dict {PACKAGE_PIN J18 IOSTANDARD LVCMOS33} [get_ports {AN[1]}]

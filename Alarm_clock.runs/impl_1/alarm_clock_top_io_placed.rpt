@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date                      : Sat May 11 17:30:19 2019
+| Date                      : Sun May 12 16:37:44 2019
 | Host                      : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command                   : report_io -file alarm_clock_top_io_placed.rpt
 | Design                    : alarm_clock_top
@@ -175,7 +175,7 @@ Table of Contents
 | H12        |                    |            | VCCAUX                       | VCCAUX      |             |         |            |      |                     |                      |    1.80 |            |           |          |      |                  |              |                   |              |
 | H13        |                    |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H14        |                    | High Range | IO_L15P_T2_DQS_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| H15        | timer_seven_seg[7] | High Range | IO_L19N_T3_A21_VREF_15       | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| H15        | dot                | High Range | IO_L19N_T3_A21_VREF_15       | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H16        |                    | High Range | IO_L13P_T2_MRCC_15           | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H17        | outsignal_counter  | High Range | IO_L18P_T2_A24_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H18        |                    | High Range | VCCO_15                      | VCCO        |             |      15 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
