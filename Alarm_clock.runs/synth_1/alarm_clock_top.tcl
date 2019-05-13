@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param simulator.modelsimInstallPath D:/SoftWare/ModelSIm/win64
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -28,6 +29,7 @@ set_property parent.project_path D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
+set_property ip_repo_paths d:/EELab/FPGA/PrincelingModuleHub/IP/vga_0 [current_project]
 set_property ip_output_repo d:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
@@ -41,6 +43,7 @@ read_verilog -library xil_defaultlib {
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/edge_detect/edge_detect.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/four_one_mux.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/music_sheet.v
+  D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/rgb_out.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_alarm.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_signal_detect.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_time.v
@@ -49,6 +52,7 @@ read_verilog -library xil_defaultlib {
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/song_player.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/two_bit_counter.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/two_four_decoder.v
+  D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/VGA/vga_sync.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/alarm_clock_top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

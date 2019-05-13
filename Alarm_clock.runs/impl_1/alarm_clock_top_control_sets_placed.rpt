@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sun May 12 16:37:44 2019
+| Date         : Mon May 13 21:49:55 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file alarm_clock_top_control_sets_placed.rpt
 | Design       : alarm_clock_top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    28 |
-| Unused register locations in slices containing registers |    48 |
+| Number of unique control sets                            |    34 |
+| Unused register locations in slices containing registers |    78 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,11 +34,13 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            5 |
+|      2 |            7 |
 |      4 |            1 |
+|      6 |            1 |
 |      8 |           10 |
+|     10 |            1 |
 |     14 |            2 |
-|    16+ |           10 |
+|    16+ |           12 |
 +--------+--------------+
 
 
@@ -48,49 +50,55 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             126 |           25 |
-| No           | No                    | Yes                    |              54 |           11 |
-| No           | Yes                   | No                     |             328 |           44 |
+| No           | No                    | No                     |              84 |           28 |
+| No           | No                    | Yes                    |              58 |           13 |
+| No           | Yes                   | No                     |             384 |           55 |
 | Yes          | No                    | No                     |               8 |            2 |
-| Yes          | No                    | Yes                    |              32 |            7 |
-| Yes          | Yes                   | No                     |              20 |            5 |
+| Yes          | No                    | Yes                    |              72 |           13 |
+| Yes          | Yes                   | No                     |              20 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------------+------------------------------------------+-------------------------------------------------------+------------------+----------------+
-|               Clock Signal               |               Enable Signal              |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
-+------------------------------------------+------------------------------------------+-------------------------------------------------------+------------------+----------------+
-|  decre_key/key_out_r                     |                                          |                                                       |                1 |              2 |
-|  incre_key/key_out_r                     |                                          |                                                       |                1 |              2 |
-|  left_key/key_out_r                      |                                          |                                                       |                1 |              2 |
-|  right_key/key_out_r                     |                                          |                                                       |                1 |              2 |
-|  set_key/key_out_r                       |                                          |                                                       |                1 |              2 |
-|  clk_module/outsignal_time_OBUF          |                                          |                                                       |                1 |              4 |
-|  decre_key/test_signal                   |                                          |                                                       |                2 |              8 |
-|  decre_key/test_signal                   | set_alarm_module/load_seconds[3]_i_1_n_0 |                                                       |                2 |              8 |
-|  set_time_module/D[1]                    |                                          |                                                       |                1 |              8 |
-|  set_time_module/D[2]                    |                                          |                                                       |                2 |              8 |
-|  set_time_module/D[0]                    |                                          |                                                       |                1 |              8 |
-|  set_time_module/timer_seven_seg[5][0]   |                                          |                                                       |                1 |              8 |
-|  clk_IBUF_BUFG                           | right_key/E[0]                           | set_time_module/enterBtn_pos_edge_detect/tick_r_reg_0 |                1 |              8 |
-|  clk_IBUF_BUFG                           | set_time_module/set_num_r                | set_time_module/enterBtn_pos_edge_detect/tick_r_reg_0 |                3 |              8 |
-|  clk_IBUF_BUFG                           | set_time_module/E[0]                     | set_time_module/enterBtn_pos_edge_detect/tick_r_reg_0 |                1 |              8 |
-|  clk_IBUF_BUFG                           | set_time_module/ones_reg[3][0]           | set_time_module/enterBtn_pos_edge_detect/tick_r_reg_0 |                2 |              8 |
-|  set_time_module/timer_seven_seg[5]_1[0] |                                          |                                                       |                3 |             14 |
-|  set_time_module/timer_seven_seg[5]_1[0] |                                          | U0_set_signal_detect/AR[0]                            |                2 |             14 |
-|  clk_IBUF_BUFG                           | song_player_module/number                | minutes_counter/number_reg[9]                         |                5 |             20 |
-|  clk_IBUF_BUFG                           |                                          | minutes_counter/counter_reg[19]                       |                5 |             40 |
-|  clk_IBUF_BUFG                           |                                          | decre_key/counter_mod_100HZ/regN[0]_i_1__2_n_0        |                5 |             40 |
-|  clk_IBUF_BUFG                           |                                          | incre_key/counter_mod_100HZ/regN[0]_i_1__1_n_0        |                5 |             40 |
-|  clk_IBUF_BUFG                           |                                          | left_key/counter_mod_100HZ/regN[0]_i_1__0_n_0         |                5 |             40 |
-|  clk_IBUF_BUFG                           |                                          | right_key/counter_mod_100HZ/regN[0]_i_1_n_0           |                5 |             40 |
-|  clk_IBUF_BUFG                           |                                          | set_key/counter_mod_100HZ/regN[0]_i_1__3_n_0          |                5 |             40 |
-|  clk_IBUF_BUFG                           |                                          |                                                       |                9 |             58 |
-|  clk_IBUF_BUFG                           |                                          | minutes_counter/time1_reg[31]                         |                8 |             64 |
-|  clk_IBUF_BUFG                           |                                          | set_time_module/enterBtn_pos_edge_detect/tick_r_reg_0 |               15 |             64 |
-+------------------------------------------+------------------------------------------+-------------------------------------------------------+------------------+----------------+
++------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+
+|               Clock Signal               |                     Enable Signal                     |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
++------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+
+|  decre_key/key_out_r                     |                                                       |                                                |                1 |              2 |
+|  incre_key/key_out_r                     |                                                       |                                                |                1 |              2 |
+|  left_key/key_out_r                      |                                                       |                                                |                1 |              2 |
+|  right_key/key_out_r                     |                                                       |                                                |                1 |              2 |
+|  set_key/key_out_r                       |                                                       |                                                |                1 |              2 |
+|  u_vga_sync/VGA_G[2]                     |                                                       | u_vga_sync/VGA_R[2]_0                          |                1 |              2 |
+|  u_vga_sync/VGA_R[2]                     |                                                       | u_vga_sync/VGA_R[2]_0                          |                1 |              2 |
+|  clk_module/outsignal_time_OBUF          |                                                       |                                                |                2 |              4 |
+|  u_vga_sync/E[0]                         |                                                       |                                                |                1 |              6 |
+|  set_time_module/D[2]                    |                                                       |                                                |                3 |              8 |
+|  set_time_module/D[0]                    |                                                       |                                                |                2 |              8 |
+|  set_time_module/D[1]                    |                                                       |                                                |                1 |              8 |
+|  set_time_module/timer_seven_seg[1][0]   |                                                       |                                                |                4 |              8 |
+|  clk_IBUF_BUFG                           | set_time_module/E[0]                                  | u_vga_sync/data0                               |                1 |              8 |
+|  clk_IBUF_BUFG                           | set_time_module/set_num_r                             | u_vga_sync/data0                               |                2 |              8 |
+|  incre_key/test_signal                   |                                                       |                                                |                2 |              8 |
+|  incre_key/test_signal                   | set_alarm_module/load_seconds[3]_i_1_n_0              |                                                |                2 |              8 |
+|  clk_IBUF_BUFG                           | set_time_module/ones_reg[3]_0[0]                      | u_vga_sync/data0                               |                2 |              8 |
+|  clk_IBUF_BUFG                           | right_key/E[0]                                        | u_vga_sync/data0                               |                1 |              8 |
+|  clk_IBUF_BUFG                           |                                                       |                                                |                4 |             10 |
+|  set_time_module/timer_seven_seg[5]_0[0] |                                                       | U0_set_signal_detect/AR[0]                     |                3 |             14 |
+|  set_time_module/timer_seven_seg[5]_0[0] |                                                       |                                                |                4 |             14 |
+|  clk_IBUF_BUFG                           | song_player_module/number                             | set_alarm_module/number_reg[9]                 |                4 |             20 |
+|  clk_IBUF_BUFG                           | u_vga_sync/counter_mod_p_tick/E[0]                    | u_vga_sync/data0                               |                2 |             20 |
+|  clk_IBUF_BUFG                           | u_vga_sync/counter_mod_p_tick/pixel_x_count_reg[0][0] | u_vga_sync/data0                               |                5 |             20 |
+|  clk_IBUF_BUFG                           |                                                       | decre_key/counter_mod_100HZ/regN[0]_i_1__2_n_0 |                5 |             40 |
+|  clk_IBUF_BUFG                           |                                                       | incre_key/counter_mod_100HZ/regN[0]_i_1__1_n_0 |                5 |             40 |
+|  clk_IBUF_BUFG                           |                                                       | left_key/counter_mod_100HZ/regN[0]_i_1__0_n_0  |                5 |             40 |
+|  clk_IBUF_BUFG                           |                                                       | right_key/counter_mod_100HZ/regN[0]_i_1_n_0    |                5 |             40 |
+|  clk_IBUF_BUFG                           |                                                       | set_key/counter_mod_100HZ/regN[0]_i_1__3_n_0   |                5 |             40 |
+|  clk_IBUF_BUFG                           |                                                       | song_player_module/counter[0]_i_1__0_n_0       |                5 |             40 |
+|  clk_IBUF_BUFG                           |                                                       | clk_module/counter[25]_i_1_n_0                 |                8 |             52 |
+|  clk_IBUF_BUFG                           |                                                       | song_player_module/time1[0]_i_1_n_0            |                8 |             64 |
+|  clk_IBUF_BUFG                           |                                                       | u_vga_sync/data0                               |               17 |             68 |
++------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+
 
 

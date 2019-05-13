@@ -29,7 +29,15 @@ module alarm_clock_top(
     output [7:0] AN,
     output audioOut, aud_sd,
     output  dot,        //  分钟与秒钟间隔的小数点
-    output  [7:0]   test_leds
+
+
+    output  hsync,
+    output  vsync,
+    output  [3:0]   VGA_R,
+    output  [3:0]   VGA_G,
+    output  [3:0]   VGA_B   
+
+//    output  [7:0]   test_leds
     );
 
 
@@ -51,6 +59,11 @@ module alarm_clock_top(
 
     wire    [3:0]   set_num;
     wire    [3:0]   set_id;
+
+    wire    vga_clk;
+    wire    [9:0]   pixel_x;
+    wire    [9:0]   pixel_y; 
+    wire            video_on;
     /*******************************************************************
             Main    Code
     *******************************************************************/
@@ -92,6 +105,12 @@ module alarm_clock_top(
         .rst_n(rst_n),
         .key_in(set_BTN),
         .key_out(set_BTN_t)
+    );
+
+    counter_mod_m #(.M(4), .N(3)) counter_vga_clk(
+        .clk(clk),
+        .rst_n(rst_n),
+        .m_out(vga_clk)
     );
 
 
@@ -263,9 +282,33 @@ module alarm_clock_top(
     check_alarm check_alarm_module(minutes_ones, load_minutes_ones, minutes_tens, load_minutes_tens, load_SW, alarm_off_SW, play_sound);
     song_player song_player_module(clk, rst_n, play_sound, audioOut, aud_sd);
     
-    assign  test_leds[3:0]  =   set_num;
-    assign  test_leds[7:4]  =   set_id;
+//    assign  test_leds[3:0]  =   set_num;
+//    assign  test_leds[7:4]  =   set_id;
+
+
+vga_sync     u_vga_sync (
+    .clk                     ( clk             ),
+    .rst_n                   ( rst_n           ),
+
+    .hsync                   ( hsync           ),
+    .vsync                   ( vsync           ),
+    .video_on                ( video_on        ),
+    .p_tick                  ( p_tick          ),
+    .pixel_x                 ( pixel_x   [9:0] ),
+    .pixel_y                 ( pixel_y   [9:0] )
+);
+
+
+rgb_out     u_rgb_out  (
+
+    .pixel_x(pixel_x),
+    .pixel_y(pixel_y),
+    .video_on(video_on),
+    .vga_r(VGA_R),
+    .vga_b(VGA_B),
+    .vga_g(VGA_G)
+);
 
 
 
-    endmodule
+endmodule

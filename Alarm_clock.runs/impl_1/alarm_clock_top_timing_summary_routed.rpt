@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sun May 12 16:38:24 2019
+| Date         : Mon May 13 21:50:38 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file alarm_clock_top_timing_summary_routed.rpt -pb alarm_clock_top_timing_summary_routed.pb -rpx alarm_clock_top_timing_summary_routed.rpx -warn_on_violation
 | Design       : alarm_clock_top
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 240 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 264 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 14 register/latch pins with no clock driven by root clock pin: U0_set_signal_detect/set_status_reg/Q (HIGH)
 
@@ -104,6 +104,32 @@ Table of Contents
 
  There are 30 register/latch pins with no clock driven by root clock pin: set_time_module/current_state_reg[3]/Q (HIGH)
 
+ There are 4 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[2]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[3]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[4]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[5]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[6]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[7]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[8]/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_x_count_reg[9]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_y_count_reg[5]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_y_count_reg[6]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_y_count_reg[7]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_y_count_reg[8]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: u_vga_sync/pixel_y_count_reg[9]/Q (HIGH)
+
 
 2. checking constant_clock
 --------------------------
@@ -117,7 +143,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 542 pins that are not constrained for maximum delay. (HIGH)
+ There are 639 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -131,7 +157,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 23 ports with no output delay specified. (HIGH)
+ There are 25 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

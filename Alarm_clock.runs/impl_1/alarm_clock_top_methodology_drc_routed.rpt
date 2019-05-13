@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sun May 12 16:38:23 2019
+| Date         : Mon May 13 21:50:36 2019
 | Host         : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file alarm_clock_top_methodology_drc_routed.rpt -pb alarm_clock_top_methodology_drc_routed.pb -rpx alarm_clock_top_methodology_drc_routed.rpx
 | Design       : alarm_clock_top
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 286
+             Violations found: 316
 +-----------+----------+------------------------------+------------+
 | Rule      | Severity | Description                  | Violations |
 +-----------+----------+------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert | 1          |
-| TIMING-17 | Warning  | Non-clocked sequential cell  | 250        |
-| TIMING-20 | Warning  | Non-clocked latch            | 35         |
+| LUTAR-1   | Warning  | LUT drives async reset alert | 2          |
+| TIMING-17 | Warning  | Non-clocked sequential cell  | 274        |
+| TIMING-20 | Warning  | Non-clocked latch            | 40         |
 +-----------+----------+------------------------------+------------+
 
 2. REPORT DETAILS
@@ -37,6 +37,11 @@ Table of Contents
 LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell U0_set_signal_detect/out_seconds_ones_reg[3]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) clock_alarm/out_seconds_ones_reg[0]/CLR, clock_alarm/out_seconds_ones_reg[1]/CLR, clock_alarm/out_seconds_ones_reg[2]/CLR, clock_alarm/out_seconds_ones_reg[3]/CLR, clock_alarm/out_seconds_tens_reg[0]/CLR, clock_alarm/out_seconds_tens_reg[1]/CLR, clock_alarm/out_seconds_tens_reg[2]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell u_vga_sync/vga_r_reg[2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_rgb_out/vga_g_reg[2]/CLR, u_rgb_out/vga_r_reg[2]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -1289,6 +1294,126 @@ Non-clocked sequential cell
 The clock pin two_counter/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
+TIMING-17#251 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/counter_mod_p_tick/regN_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#252 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/counter_mod_p_tick/regN_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#253 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/hsync_r_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#254 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#255 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#256 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#257 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#258 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#259 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#260 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#261 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#262 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#263 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_x_count_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#264 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#265 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#266 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#267 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#268 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#269 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#270 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#271 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#272 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#273 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/pixel_y_count_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#274 Warning
+Non-clocked sequential cell  
+The clock pin u_vga_sync/vsync_r_reg/C is not reached by a timing clock
+Related violations: <none>
+
 TIMING-20#1 Warning
 Non-clocked latch  
 The latch clock_alarm/out_minutes_ones_reg[0] cannot be properly analyzed as its control pin clock_alarm/out_minutes_ones_reg[0]/G is not reached by a timing clock
@@ -1462,6 +1587,31 @@ Related violations: <none>
 TIMING-20#35 Warning
 Non-clocked latch  
 The latch set_key/key_out_r_reg cannot be properly analyzed as its control pin set_key/key_out_r_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch u_rgb_out/vga_b_reg[0] cannot be properly analyzed as its control pin u_rgb_out/vga_b_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch u_rgb_out/vga_b_reg[1] cannot be properly analyzed as its control pin u_rgb_out/vga_b_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch u_rgb_out/vga_b_reg[2] cannot be properly analyzed as its control pin u_rgb_out/vga_b_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch u_rgb_out/vga_g_reg[2] cannot be properly analyzed as its control pin u_rgb_out/vga_g_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch u_rgb_out/vga_r_reg[2] cannot be properly analyzed as its control pin u_rgb_out/vga_r_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 

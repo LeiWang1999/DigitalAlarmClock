@@ -66,12 +66,14 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param simulator.modelsimInstallPath D:/SoftWare/ModelSIm/win64
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.cache/wt [current_project]
   set_property parent.project_path D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.xpr [current_project]
+  set_property ip_repo_paths d:/EELab/FPGA/PrincelingModuleHub/IP/vga_0 [current_project]
   set_property ip_output_repo D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/synth_1/alarm_clock_top.dcp
