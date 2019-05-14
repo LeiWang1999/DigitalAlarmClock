@@ -25,7 +25,7 @@
 
 module RAM_set(
 	input clk,
-	input rst,
+	input rst_n,
 	input [5:0] data,
 	output reg [7:0] col0,
 	output reg [7:0] col1,
@@ -36,9 +36,9 @@ module RAM_set(
 	output reg [7:0] col6
 	);
 
-	always @(posedge clk or negedge rst)
+	always @(posedge clk or negedge rst_n)
 		begin
-			if (!rst)
+			if (!rst_n)
 				begin
 					col0 <= 8'b0000_0000;
 					col1 <= 8'b0000_0000;

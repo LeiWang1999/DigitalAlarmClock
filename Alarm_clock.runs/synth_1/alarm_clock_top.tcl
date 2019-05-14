@@ -18,7 +18,10 @@ proc create_report { reportName command } {
   }
 }
 set_param simulator.modelsimInstallPath D:/SoftWare/ModelSIm/win64
+set_param synth.incrementalSynthesisCache C:/Users/Princeling/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20324-LAPTOP-LTO7EJI2/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -43,6 +46,7 @@ read_verilog -library xil_defaultlib {
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/edge_detect/edge_detect.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/four_one_mux.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/imports/src/music_sheet.v
+  D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/ram_set.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/rgb_out.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_alarm.v
   D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.srcs/sources_1/new/set_signal_detect.v

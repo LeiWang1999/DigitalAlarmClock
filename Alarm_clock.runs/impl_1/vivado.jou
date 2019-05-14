@@ -2,8 +2,8 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Mon May 13 21:49:11 2019
-# Process ID: 7540
+# Start of session at: Tue May 14 09:49:03 2019
+# Process ID: 22696
 # Current directory: D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1
 # Command line: vivado.exe -log alarm_clock_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source alarm_clock_top.tcl -notrace
 # Log file: D:/EELab/FPGA/HomeWork/Alarm_clock/Alarm_clock.runs/impl_1/alarm_clock_top.vdi

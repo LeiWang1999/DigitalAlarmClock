@@ -30,6 +30,11 @@ module set_alarm(
     
     reg currentPos = 0;
 
+    initial begin
+        load_seconds = 0;
+        load_minutes = 2;
+    end
+
     always@ (posedge signal) begin
         if(load) begin
             if(moveRightBtn || moveLeftBtn)

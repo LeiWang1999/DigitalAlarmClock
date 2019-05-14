@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557755290">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557798475">
   <File Type="PA-TCL" Name="alarm_clock_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="alarm_clock_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="alarm_clock_top_reports.tcl"/>
@@ -93,6 +93,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/ram_set.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/rgb_out.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -173,14 +180,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/alarm_clock_top.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ram_set.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

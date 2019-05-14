@@ -107,13 +107,6 @@ module alarm_clock_top(
         .key_out(set_BTN_t)
     );
 
-    counter_mod_m #(.M(4), .N(3)) counter_vga_clk(
-        .clk(clk),
-        .rst_n(rst_n),
-        .m_out(vga_clk)
-    );
-
-
 
     /******************************************************
            时钟产生电路
@@ -282,32 +275,42 @@ module alarm_clock_top(
     check_alarm check_alarm_module(minutes_ones, load_minutes_ones, minutes_tens, load_minutes_tens, load_SW, alarm_off_SW, play_sound);
     song_player song_player_module(clk, rst_n, play_sound, audioOut, aud_sd);
     
-//    assign  test_leds[3:0]  =   set_num;
-//    assign  test_leds[7:4]  =   set_id;
 
 
-vga_sync     u_vga_sync (
-    .clk                     ( clk             ),
-    .rst_n                   ( rst_n           ),
 
-    .hsync                   ( hsync           ),
-    .vsync                   ( vsync           ),
-    .video_on                ( video_on        ),
-    .p_tick                  ( p_tick          ),
-    .pixel_x                 ( pixel_x   [9:0] ),
-    .pixel_y                 ( pixel_y   [9:0] )
-);
+    /******************************************************
+          VGA信号产生电路
+    ********************************************************/
 
 
-rgb_out     u_rgb_out  (
+    vga_sync     u_vga_sync (
+        .clk                     ( clk             ),
+        .rst_n                   ( rst_n           ),
 
-    .pixel_x(pixel_x),
-    .pixel_y(pixel_y),
-    .video_on(video_on),
-    .vga_r(VGA_R),
-    .vga_b(VGA_B),
-    .vga_g(VGA_G)
-);
+        .hsync                   ( hsync           ),
+        .vsync                   ( vsync           ),
+        .video_on                ( video_on        ),
+        .p_tick                  ( vga_clk         ),
+        .pixel_x                 ( pixel_x   [9:0] ),
+        .pixel_y                 ( pixel_y   [9:0] )
+    );
+
+
+    rgb_out     u_rgb_out  (
+        .clk(clk),
+        .rst_n(rst_n),
+        .minutes_tens(out_minutes_tens),
+        .minutes_ones(out_minutes_ones),
+        .seconds_tens(out_seconds_tens),
+        .seconds_ones(out_seconds_ones),
+        .vga_clk(vga_clk),
+        .pixel_x(pixel_x),
+        .pixel_y(pixel_y),
+        .video_on(video_on),
+        .vga_r(VGA_R),
+        .vga_b(VGA_B),
+        .vga_g(VGA_G)
+    );
 
 
 

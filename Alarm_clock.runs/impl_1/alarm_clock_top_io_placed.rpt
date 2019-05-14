@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date                      : Mon May 13 21:49:55 2019
+| Date                      : Tue May 14 09:49:48 2019
 | Host                      : LAPTOP-LTO7EJI2 running 64-bit major release  (build 9200)
 | Command                   : report_io -file alarm_clock_top_io_placed.rpt
 | Design                    : alarm_clock_top
