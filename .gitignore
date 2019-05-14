@@ -1,3 +1,10 @@
+*.cache
+
+*.sim
+
+*.ip_user_files
+
+
 !*.srcs
 # 不忽略源文件
 !*.xpr  
