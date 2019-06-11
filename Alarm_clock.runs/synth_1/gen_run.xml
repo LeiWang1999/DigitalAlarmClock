@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557798475">
   <File Type="PA-TCL" Name="alarm_clock_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="alarm_clock_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="alarm_clock_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="alarm_clock_top.vds"/>
   <File Type="RDS-UTIL" Name="alarm_clock_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="alarm_clock_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="alarm_clock_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="alarm_clock_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="alarm_clock_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/check_alarm.v">
@@ -206,9 +203,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

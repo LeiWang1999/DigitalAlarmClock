@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557798475">
-  <File Type="BITSTR-BMM" Name="alarm_clock_top_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="alarm_clock_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="alarm_clock_top_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="alarm_clock_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="alarm_clock_top.tcl"/>
-  <File Type="OPT-TIMING" Name="alarm_clock_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="alarm_clock_top_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="alarm_clock_top_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="alarm_clock_top_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="alarm_clock_top_reports.tcl"/>
+  <File Type="OPT-DCP" Name="alarm_clock_top_opt.dcp"/>
   <File Type="OPT-DRC" Name="alarm_clock_top_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="alarm_clock_top.hwdef"/>
   <File Type="PWROPT-DCP" Name="alarm_clock_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="alarm_clock_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="alarm_clock_top_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="alarm_clock_top_placed.dcp"/>
   <File Type="PLACE-IO" Name="alarm_clock_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="alarm_clock_top_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="alarm_clock_top_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="alarm_clock_top_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="alarm_clock_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="alarm_clock_top_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="alarm_clock_top_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="alarm_clock_top.bgn"/>
-  <File Type="PLACE-TIMING" Name="alarm_clock_top_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="alarm_clock_top_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="alarm_clock_top.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="alarm_clock_top_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="alarm_clock_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="alarm_clock_top_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="alarm_clock_top.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="alarm_clock_top_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="alarm_clock_top_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="alarm_clock_top_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="alarm_clock_top_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="alarm_clock_top_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="alarm_clock_top_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="alarm_clock_top.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="alarm_clock_top_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="alarm_clock_top.mmi"/>
+  <File Type="BITSTR-LTX" Name="alarm_clock_top.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="alarm_clock_top_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="alarm_clock_top.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="alarm_clock_top_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="alarm_clock_top.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="alarm_clock_top_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="alarm_clock_top.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="alarm_clock_top_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="alarm_clock_top_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="alarm_clock_top_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="alarm_clock_top_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="alarm_clock_top_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="alarm_clock_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="alarm_clock_top_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="alarm_clock_top_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="alarm_clock_top_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="alarm_clock_top_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="alarm_clock_top_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="alarm_clock_top_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="alarm_clock_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="alarm_clock_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="alarm_clock_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="alarm_clock_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="alarm_clock_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="alarm_clock_top_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="alarm_clock_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="alarm_clock_top_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="alarm_clock_top.rbt"/>
   <File Type="BITSTR-NKY" Name="alarm_clock_top.nky"/>
   <File Type="BG-DRC" Name="alarm_clock_top.drc"/>
@@ -266,9 +247,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
